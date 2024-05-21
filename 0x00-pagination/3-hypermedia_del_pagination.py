@@ -43,7 +43,7 @@ class Server:
         """Get a page of data starting from a specific index,
            with pagination information.
         """
-        data = self.dataset()
+        data = self.indexed_dataset()
         assert index is not None and 0 <= index <= max(data.keys())
         page_data = []
         c_index = index

@@ -51,7 +51,7 @@ class Server:
         page_data = self.get_page(page, page_size)
         start, end = index_range(page, page_size)
         data = self.__dataset
-        next_page = None if start + page_size > len(data) else page - 1
+        next_page = None if start + page_size > len(data) else page + 1
         prev_page = None if start - page_size < 0 else page - 1
         return dict(
             page_size=len(page_data),
